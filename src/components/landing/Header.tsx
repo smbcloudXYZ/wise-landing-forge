@@ -8,7 +8,8 @@ const Header = () => {
         {/* Logo */}
         <a href="/" className="flex items-center gap-2">
           <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-lg">€</span>
+            <span className="text-primary-foreground font-bold text-lg">
+          </span>
           </div>
           <span className="text-xl font-bold text-foreground">Snac</span>
         </a>
@@ -17,9 +18,7 @@ const Header = () => {
         <nav className="hidden md:flex items-center gap-8">
           <a href="#features" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Company Purchases</a>
           <a href="#how-it-works" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Cross-Border </a>
-          <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-            Help
-          </a>
+          <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Spend Overview</a>
         </nav>
 
         {/* Desktop CTA */}
