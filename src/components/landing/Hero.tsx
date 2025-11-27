@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import buildingModel from "@/assets/building-3d-model.png";
+import buildingModel from "@/assets/building-crypto.png";
 const Hero = () => {
   return <section className="pt-32 pb-20 md:pt-40 md:pb-32 bg-background overflow-hidden">
       <div className="container">
