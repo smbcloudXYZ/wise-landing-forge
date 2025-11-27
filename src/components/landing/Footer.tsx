@@ -77,7 +77,7 @@ const Footer = () => {
           {/* Logo & Social */}
           <div className="col-span-2 md:col-span-1">
             <a href="/" className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+              <div className="w-8 h-8 rounded-full flex items-center justify-center bg-lime-400">
                 <span className="text-primary-foreground font-bold text-lg">
               </span>
               </div>
