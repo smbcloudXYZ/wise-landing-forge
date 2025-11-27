@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { ThemeToggle } from "@/components/ThemeToggle";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
@@ -22,7 +23,8 @@ const Header = () => {
         </nav>
 
         {/* Desktop CTA */}
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-3">
+          <ThemeToggle />
           <Button variant="ghost" size="sm">
             Log in
           </Button>
@@ -50,6 +52,9 @@ const Header = () => {
               Help
             </a>
             <div className="flex flex-col gap-2 pt-4 border-t border-border">
+              <div className="flex items-center justify-center pb-2">
+                <ThemeToggle />
+              </div>
               <Button variant="outline" className="w-full">
                 Log in
               </Button>
