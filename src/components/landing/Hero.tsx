@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import buildingModel from "@/assets/building-3d-model.png";
 const Hero = () => {
   return <section className="pt-32 pb-20 md:pt-40 md:pb-32 bg-background overflow-hidden">
       <div className="container">
@@ -49,6 +50,18 @@ const Hero = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* 3D Building Model */}
+        <div className="mt-16 md:mt-24 flex justify-center animate-fade-up animation-delay-400">
+          <div className="relative max-w-2xl">
+            <div className="absolute inset-0 bg-primary/10 rounded-2xl blur-3xl" />
+            <img 
+              src={buildingModel} 
+              alt="3D Building Model" 
+              className="relative w-full h-auto drop-shadow-2xl"
+            />
           </div>
         </div>
       </div>
