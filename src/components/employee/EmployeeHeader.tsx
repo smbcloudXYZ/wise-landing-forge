@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Bell, User } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 const EmployeeHeader = () => {
+  const navigate = useNavigate();
+  
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container flex items-center justify-between h-16 md:h-20">
@@ -21,7 +23,7 @@ const EmployeeHeader = () => {
 
         <div className="flex items-center gap-2">
           <Button 
-            onClick={() => window.open('about:blank', '_blank')}
+            onClick={() => navigate('/pay-ai-agent')}
             className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-full px-4"
           >
             Pay AI Agent
