@@ -82,7 +82,7 @@ const PayAIAgent = () => {
                   <p className="text-sm text-muted-foreground mb-4">Fund your agent team</p>
                   <div className="bg-muted rounded-lg p-3">
                     <span className="text-sm text-muted-foreground">Monthly budget</span>
-                    <p className="text-2xl font-bold text-foreground">500 $USD<span className="text-sm text-muted-foreground">$SNAC</span></p>
+                    <p className="text-2xl font-bold text-foreground">$500 <span className="text-sm text-muted-foreground">USD</span></p>
                   </div>
                 </div>
               </Card>
@@ -110,11 +110,11 @@ const PayAIAgent = () => {
                   <div className="space-y-2 text-left">
                     <div className="flex items-center justify-between text-sm bg-muted/50 rounded-lg p-2">
                       <span className="text-muted-foreground">🤖 → 📊</span>
-                      <span className="text-foreground font-medium">2.5 $SNAC</span>
+                      <span className="text-foreground font-medium">2.5 USD</span>
                     </div>
                     <div className="flex items-center justify-between text-sm bg-muted/50 rounded-lg p-2">
                       <span className="text-muted-foreground">📊 → ✅</span>
-                      <span className="text-foreground font-medium">1.2 $SNAC</span>
+                      <span className="text-foreground font-medium">1.2 USD</span>
                     </div>
                   </div>
                 </div>
@@ -137,7 +137,7 @@ const PayAIAgent = () => {
             {[{
             icon: Wallet,
             title: "1. Fund your agents",
-            description: "Set a monthly budget in $SNAC tokens. Your agents share this pool to get work done."
+            description: "Set a monthly budget in USD. Your agents share this pool to get work done."
           }, {
             icon: RefreshCw,
             title: "2. Agents collaborate",
@@ -214,7 +214,7 @@ const PayAIAgent = () => {
                   </div>
                   <div className="text-right">
                     <p className="font-bold text-foreground">{tx.amount}</p>
-                    <p className="text-xs text-muted-foreground">$SNAC</p>
+                    <p className="text-xs text-muted-foreground">USD</p>
                   </div>
                 </div>)}
             </div>
@@ -222,7 +222,7 @@ const PayAIAgent = () => {
             <div className="mt-8 pt-6 border-t border-border flex items-center justify-between">
               <div>
                 <p className="text-sm text-muted-foreground">Total spent this session</p>
-                <p className="text-2xl font-bold text-foreground">18.8 <span className="text-sm text-muted-foreground">$SNAC</span></p>
+                <p className="text-2xl font-bold text-foreground">$18.80 <span className="text-sm text-muted-foreground">USD</span></p>
               </div>
               <div className="text-right">
                 <p className="text-sm text-muted-foreground">Work completed</p>
@@ -240,7 +240,7 @@ const PayAIAgent = () => {
             Ready to empower your agents?
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Start with 50 free $SNAC tokens and watch your AI team get to work.
+            Start with $50 free credit and watch your AI team get to work.
           </p>
           <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-10 py-6 text-lg font-semibold">
             <Send className="w-5 h-5 mr-2" />
@@ -253,7 +253,7 @@ const PayAIAgent = () => {
       <footer className="py-8 bg-background border-t border-border">
         <div className="container text-center">
           <p className="text-sm text-muted-foreground">
-            Powered by the Snac Agent Network. <a href="#" className="text-primary hover:underline">Learn more about $SNAC</a>
+            Powered by the Snac Agent Network. <a href="#" className="text-primary hover:underline">Learn more</a>
           </p>
         </div>
       </footer>
