@@ -1,32 +1,24 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-const steps = [
-  {
-    number: "01",
-    title: "Sign up for free",
-    description: "Create your account in minutes. All you need is your email address to get started.",
-  },
-  {
-    number: "02",
-    title: "Choose your amount",
-    description: "Tell us how much you want to send and where. We'll show you our fee upfront—no surprises.",
-  },
-  {
-    number: "03",
-    title: "Add recipient details",
-    description: "Enter your recipient's bank details. We'll make sure everything is correct.",
-  },
-  {
-    number: "04",
-    title: "Send money",
-    description: "Pay for your transfer and we'll do the rest. Track your money in real time.",
-  },
-];
-
+const steps = [{
+  number: "01",
+  title: "Sign up for free",
+  description: "Create your account in minutes. All you need is your email address to get started."
+}, {
+  number: "02",
+  title: "Choose your amount",
+  description: "Tell us how much you want to send and where. We'll show you our fee upfront—no surprises."
+}, {
+  number: "03",
+  title: "Add recipient details",
+  description: "Enter your recipient's bank details. We'll make sure everything is correct."
+}, {
+  number: "04",
+  title: "Send money",
+  description: "Pay for your transfer and we'll do the rest. Track your money in real time."
+}];
 const HowItWorks = () => {
-  return (
-    <section id="how-it-works" className="py-20 md:py-32 bg-secondary text-secondary-foreground">
+  return <section id="how-it-works" className="py-20 md:py-32 bg-secondary text-secondary-foreground">
       <div className="container">
         <div className="max-w-2xl mb-16">
           <h2 className="text-3xl md:text-5xl font-bold">
@@ -38,24 +30,18 @@ const HowItWorks = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {steps.map((step, index) => (
-            <div
-              key={index}
-              className="relative animate-fade-up"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
+          {steps.map((step, index) => <div key={index} className="relative animate-fade-up" style={{
+          animationDelay: `${index * 100}ms`
+        }}>
               {/* Connector line */}
-              {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-primary/30" />
-              )}
+              {index < steps.length - 1 && <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-primary/30" />}
               
               <div className="mb-4">
-                <span className="text-6xl font-bold text-primary/30">{step.number}</span>
+                <span className="text-6xl font-bold text-lime-400">{step.number}</span>
               </div>
               <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
               <p className="text-secondary-foreground/70">{step.description}</p>
-            </div>
-          ))}
+            </div>)}
         </div>
 
         <div className="mt-16 text-center">
@@ -65,8 +51,6 @@ const HowItWorks = () => {
           </Button>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HowItWorks;
