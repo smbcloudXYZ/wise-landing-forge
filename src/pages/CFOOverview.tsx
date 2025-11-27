@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, TrendingUp, TrendingDown, DollarSign, Users, CreditCard, AlertCircle, ArrowUpRight } from "lucide-react";
+import { ArrowLeft, TrendingUp, DollarSign, Users, CreditCard, AlertCircle, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
 
 const monthlySpendData = [
@@ -50,6 +51,7 @@ const CFOOverview = () => {
             <h1 className="text-xl font-semibold text-secondary-foreground">CFO Dashboard</h1>
           </div>
           <div className="flex items-center gap-3">
+            <ThemeToggle />
             <Button variant="outline" size="sm" className="border-secondary-foreground/20 text-secondary-foreground hover:bg-secondary-foreground/10">
               Export Report
             </Button>
