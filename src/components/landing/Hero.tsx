@@ -1,17 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-
 const Hero = () => {
-  return (
-    <section className="pt-32 pb-20 md:pt-40 md:pb-32 bg-background overflow-hidden">
+  return <section className="pt-32 pb-20 md:pt-40 md:pb-32 bg-background overflow-hidden">
       <div className="container">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight animate-fade-up">
-            Money without borders
-          </h1>
-          <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-up animation-delay-100">
-            Join over 16 million people and businesses who save money when they spend, send and manage money internationally.
-          </p>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight animate-fade-up">Blockchain Expense Management</h1>
+          <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-up animation-delay-100">For CFOs with cross-border transactions, international payments & th</p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up animation-delay-200">
             <Button variant="hero" size="lg">
               Open an account
@@ -58,8 +52,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;

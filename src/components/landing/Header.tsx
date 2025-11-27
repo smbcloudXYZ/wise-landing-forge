@@ -1,19 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+  return <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
         <a href="/" className="flex items-center gap-2">
           <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-lg">W</span>
+            <span className="text-primary-foreground font-bold text-lg">€</span>
           </div>
-          <span className="text-xl font-bold text-foreground">wise</span>
+          <span className="text-xl font-bold text-foreground">Snac</span>
         </a>
 
         {/* Desktop Navigation */}
@@ -40,18 +37,13 @@ const Header = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <button
-          className="md:hidden p-2"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label="Toggle menu"
-        >
+        <button className="md:hidden p-2" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle menu">
           {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
       {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-background border-b border-border animate-fade-in">
+      {isMenuOpen && <div className="md:hidden bg-background border-b border-border animate-fade-in">
           <nav className="container py-4 flex flex-col gap-4">
             <a href="#features" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-2">
               Personal
@@ -71,10 +63,7 @@ const Header = () => {
               </Button>
             </div>
           </nav>
-        </div>
-      )}
-    </header>
-  );
+        </div>}
+    </header>;
 };
-
 export default Header;
