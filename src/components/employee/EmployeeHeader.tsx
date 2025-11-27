@@ -20,6 +20,12 @@ const EmployeeHeader = () => {
         </div>
 
         <div className="flex items-center gap-2">
+          <Button 
+            onClick={() => window.open('about:blank', '_blank')}
+            className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-full px-4"
+          >
+            Pay AI Agent
+          </Button>
           <ThemeToggle />
           <Button variant="ghost" size="icon" className="relative">
             <Bell className="w-5 h-5 text-muted-foreground" />
