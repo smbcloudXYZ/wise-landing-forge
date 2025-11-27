@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import Index from "./pages/Index";
 import CFOOverview from "./pages/CFOOverview";
 import EmployeePortal from "./pages/EmployeePortal";
+import PayAIAgent from "./pages/PayAIAgent";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/cfo-overview" element={<CFOOverview />} />
             <Route path="/employee-portal" element={<EmployeePortal />} />
+            <Route path="/pay-ai-agent" element={<PayAIAgent />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
