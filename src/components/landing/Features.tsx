@@ -7,7 +7,7 @@ const features = [
   },
   {
     icon: Zap,
-    title: "Low Cost Cross Border Transactions",
+    title: "Low-Cost Cross-Border Transactions",
     description: "Most transfers arrive in seconds. Track your money every step of the way.",
   },
   {
