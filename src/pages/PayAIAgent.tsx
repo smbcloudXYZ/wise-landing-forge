@@ -3,10 +3,8 @@ import { Card } from "@/components/ui/card";
 import { ArrowLeft, ArrowRight, Bot, Zap, RefreshCw, Shield, Wallet, Send } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ThemeToggle } from "@/components/ThemeToggle";
-
 const PayAIAgent = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="container flex items-center justify-between h-16 md:h-20">
@@ -32,16 +30,22 @@ const PayAIAgent = () => {
             Autonomous Agent Economy
           </div>
           
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 animate-fade-up" style={{ animationDelay: '100ms' }}>
+          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 animate-fade-up" style={{
+          animationDelay: '100ms'
+        }}>
             Fund your agents.<br />
             <span className="text-primary">Let them work for you.</span>
           </h1>
           
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-up" style={{ animationDelay: '200ms' }}>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-up" style={{
+          animationDelay: '200ms'
+        }}>
             Give your AI agents a budget and watch them collaborate. They pay each other to get work done — expenses, reports, approvals, all handled automatically.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up" style={{ animationDelay: '300ms' }}>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up" style={{
+          animationDelay: '300ms'
+        }}>
             <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 py-6 text-lg font-semibold">
               <Wallet className="w-5 h-5 mr-2" />
               Fund Your Agents
@@ -78,7 +82,7 @@ const PayAIAgent = () => {
                   <p className="text-sm text-muted-foreground mb-4">Fund your agent team</p>
                   <div className="bg-muted rounded-lg p-3">
                     <span className="text-sm text-muted-foreground">Monthly budget</span>
-                    <p className="text-2xl font-bold text-foreground">500 <span className="text-sm text-muted-foreground">$SNAC</span></p>
+                    <p className="text-2xl font-bold text-foreground">500 $USD<span className="text-sm text-muted-foreground">$SNAC</span></p>
                   </div>
                 </div>
               </Card>
@@ -92,7 +96,9 @@ const PayAIAgent = () => {
               </div>
 
               {/* Agent Network */}
-              <Card className="p-6 bg-background border-border shadow-lg animate-fade-up" style={{ animationDelay: '200ms' }}>
+              <Card className="p-6 bg-background border-border shadow-lg animate-fade-up" style={{
+              animationDelay: '200ms'
+            }}>
                 <div className="text-center">
                   <div className="flex justify-center gap-2 mb-4">
                     <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-xl">🤖</div>
@@ -128,35 +134,27 @@ const PayAIAgent = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Wallet,
-                title: "1. Fund your agents",
-                description: "Set a monthly budget in $SNAC tokens. Your agents share this pool to get work done.",
-              },
-              {
-                icon: RefreshCw,
-                title: "2. Agents collaborate",
-                description: "Expense Bot needs a report? It pays Report Agent. Report Agent needs approval? It pays Approval Bot.",
-              },
-              {
-                icon: Shield,
-                title: "3. Stay in control",
-                description: "Set spending limits, approve large transactions, and track every payment in real-time.",
-              },
-            ].map((step, index) => (
-              <Card 
-                key={step.title} 
-                className="p-6 bg-background border-border hover:border-primary/30 transition-colors animate-fade-up"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
+            {[{
+            icon: Wallet,
+            title: "1. Fund your agents",
+            description: "Set a monthly budget in $SNAC tokens. Your agents share this pool to get work done."
+          }, {
+            icon: RefreshCw,
+            title: "2. Agents collaborate",
+            description: "Expense Bot needs a report? It pays Report Agent. Report Agent needs approval? It pays Approval Bot."
+          }, {
+            icon: Shield,
+            title: "3. Stay in control",
+            description: "Set spending limits, approve large transactions, and track every payment in real-time."
+          }].map((step, index) => <Card key={step.title} className="p-6 bg-background border-border hover:border-primary/30 transition-colors animate-fade-up" style={{
+            animationDelay: `${index * 100}ms`
+          }}>
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                   <step.icon className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="font-bold text-foreground text-lg mb-2">{step.title}</h3>
                 <p className="text-muted-foreground">{step.description}</p>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -176,18 +174,39 @@ const PayAIAgent = () => {
           <Card className="p-8 bg-background border-border shadow-lg">
             <div className="space-y-6">
               {/* Transaction flow */}
-              {[
-                { from: "You", to: "Expense Bot", amount: "100", note: "Monthly funding", emoji: "👤→🤖" },
-                { from: "Expense Bot", to: "Receipt Scanner", amount: "5.2", note: "Scan 12 receipts", emoji: "🤖→📷" },
-                { from: "Expense Bot", to: "Report Agent", amount: "8.5", note: "Generate expense report", emoji: "🤖→📊" },
-                { from: "Report Agent", to: "Analytics Agent", amount: "3.1", note: "Add spending insights", emoji: "📊→📈" },
-                { from: "Report Agent", to: "Approval Bot", amount: "2.0", note: "Request approval", emoji: "📊→✅" },
-              ].map((tx, index) => (
-                <div 
-                  key={index} 
-                  className="flex items-center gap-4 p-4 bg-muted/50 rounded-xl animate-fade-up"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
+              {[{
+              from: "You",
+              to: "Expense Bot",
+              amount: "100",
+              note: "Monthly funding",
+              emoji: "👤→🤖"
+            }, {
+              from: "Expense Bot",
+              to: "Receipt Scanner",
+              amount: "5.2",
+              note: "Scan 12 receipts",
+              emoji: "🤖→📷"
+            }, {
+              from: "Expense Bot",
+              to: "Report Agent",
+              amount: "8.5",
+              note: "Generate expense report",
+              emoji: "🤖→📊"
+            }, {
+              from: "Report Agent",
+              to: "Analytics Agent",
+              amount: "3.1",
+              note: "Add spending insights",
+              emoji: "📊→📈"
+            }, {
+              from: "Report Agent",
+              to: "Approval Bot",
+              amount: "2.0",
+              note: "Request approval",
+              emoji: "📊→✅"
+            }].map((tx, index) => <div key={index} className="flex items-center gap-4 p-4 bg-muted/50 rounded-xl animate-fade-up" style={{
+              animationDelay: `${index * 100}ms`
+            }}>
                   <span className="text-2xl">{tx.emoji}</span>
                   <div className="flex-1">
                     <p className="font-medium text-foreground">{tx.from} → {tx.to}</p>
@@ -197,8 +216,7 @@ const PayAIAgent = () => {
                     <p className="font-bold text-foreground">{tx.amount}</p>
                     <p className="text-xs text-muted-foreground">$SNAC</p>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
             
             <div className="mt-8 pt-6 border-t border-border flex items-center justify-between">
@@ -239,8 +257,6 @@ const PayAIAgent = () => {
           </p>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default PayAIAgent;
