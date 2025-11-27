@@ -2,22 +2,22 @@ import { Globe, Zap, Shield, CreditCard } from "lucide-react";
 const features = [
   {
     icon: Globe,
-    title: "Instant Knowledge",
+    title: "Faster Knowledge",
     description: "Send money to 80+ countries with the real exchange rate. No hidden fees, ever.",
   },
   {
     icon: Zap,
-    title: "Lightning fast",
+    title: "Seamless Audit Trails",
     description: "Most transfers arrive in seconds. Track your money every step of the way.",
   },
   {
     icon: Shield,
-    title: "Safe and secure",
+    title: "Near-Zero Processing Fees",
     description: "We're regulated by the world's most respected authorities. Your money is always protected.",
   },
   {
     icon: CreditCard,
-    title: "Wise Card",
+    title: "Global Payments",
     description: "Spend abroad with the real exchange rate. Works everywhere Mastercard is accepted.",
   },
 ];
