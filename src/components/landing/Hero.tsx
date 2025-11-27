@@ -14,9 +14,11 @@ const Hero = () => {
                 CFO Overview <ArrowRight className="w-5 h-5" />
               </Button>
             </Link>
-            <Button variant="navy-outline" size="lg">
-              Employee Spending Portal  
-            </Button>
+            <Link to="/employee-portal">
+              <Button variant="navy-outline" size="lg">
+                Employee Spending Portal  
+              </Button>
+            </Link>
           </div>
         </div>
 
